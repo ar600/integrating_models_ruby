@@ -1,0 +1,15 @@
+<h1>Users/Edit</h1>
+
+
+<form class="new-form" action="/users/<%=@user.id%>/update" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="patch">
+
+  Name:
+  <input type="text" name="name" value="<%=@user.name%>">
+  Email:
+  <input type="email" name="email" value="<%=@user.email%>">
+  Age:
+  <input type="number" name="age" value="<%=@user.age%>">
+  <input type="submit" name="submit" value="Update">
+</form>
